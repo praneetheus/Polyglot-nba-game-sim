@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+    <title>NBA Simulation App</title>
+    <!-- Bootstrap CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Welcome to NBA Simulator</h1>
+          <p class="lead">This web app allows you to simulate & predict NBA game outcomes with various models for 2019-20 season.</p>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              model 1 
+            </label>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              model 2
+            </label>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              model 3
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-5 "></div>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            Pick team A
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Team A</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelectTeamA">
+                  <option selected>Choose...</option>
+                    <option value ="ATL" > Atlanta Hawks</option>
+                    <option value ="BOS" > Boston Celtics</option>
+                    <option value ="BKN" > Brooklyn Nets</option>
+                    <option value ="CHA" > Charlotte Hornets</option>
+                    <option value ="CHI" > Chicago Bulls</option>
+                    <option value ="CLE" > Cleveland Cavaliers</option>
+                    <option value ="DAL" > Dallas Mavericks</option>
+                    <option value ="DEN" > Denver Nuggets</option>
+                    <option value ="DET" > Detroit Pistons</option>
+                    <option value ="GSW" > Golden State Warriors</option> 
+                    <option value ="HOU" > Houston Rockets</option>
+                    <option value ="IND" > Indiana Pacers</option>
+                    <option value ="LAC" > Los Angeles Clippers</option> 
+                    <option value ="LAL" > Los Angeles Lakers</option> 
+                    <option value ="MEM" > Memphis Grizzlies</option>
+                    <option value ="MIA" > Miami Heat</option>
+                    <option value ="MIL" > Milwaukee Bucks</option>
+                    <option value ="MIN" > Minnesota Timberwolves</option>
+                    <option value ="NOP" > New Orleans Pelicans</option>
+                    <option value ="NYK" > New York Knicks</option> 
+                    <option value ="OKC" > Oklahoma City Thunder</option> 
+                    <option value ="ORL" > Orlando Magic</option>
+                    <option value ="PHI" > Philadelphia 76ers</option>
+                    <option value ="PHX" > Phoenix Suns</option>
+                    <option value ="POR" > Portland Trail Blazers</option> 
+                    <option value ="SAC" > Sacramento Kings</option>
+                    <option value ="SAS" > San Antonio Spurs</option> 
+                    <option value ="TOR" > Toronto Raptors</option>
+                    <option value ="UTA" > Utah Jazz</option>
+                    <option value ="WAS" > Washington Wizards</option>
+                </select>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <!-- for centering the button -->
+            <div class="mx-auto" style="width: 200px;">
+              <button class="btn btn-primary" type="submit" id="simulate-btn-1">Simulate</button>
+              <button class="btn btn-primary" type="submit" id="simulate-btn-2">Simulate</button>
+              <button class="btn btn-primary" type="submit" id="simulate-btn-3">Simulate</button>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            Pick team B
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Team A</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelectTeamB">
+                  <option selected>Choose...</option>
+                    <option value ="ATL" > Atlanta Hawks</option>
+                    <option value ="BOS" > Boston Celtics</option>
+                    <option value ="BKN" > Brooklyn Nets</option>
+                    <option value ="CHA" > Charlotte Hornets</option>
+                    <option value ="CHI" > Chicago Bulls</option>
+                    <option value ="CLE" > Cleveland Cavaliers</option>
+                    <option value ="DAL" > Dallas Mavericks</option>
+                    <option value ="DEN" > Denver Nuggets</option>
+                    <option value ="DET" > Detroit Pistons</option>
+                    <option value ="GSW" > Golden State Warriors</option> 
+                    <option value ="HOU" > Houston Rockets</option>
+                    <option value ="IND" > Indiana Pacers</option>
+                    <option value ="LAC" > Los Angeles Clippers</option> 
+                    <option value ="LAL" > Los Angeles Lakers</option> 
+                    <option value ="MEM" > Memphis Grizzlies</option>
+                    <option value ="MIA" > Miami Heat</option>
+                    <option value ="MIL" > Milwaukee Bucks</option>
+                    <option value ="MIN" > Minnesota Timberwolves</option>
+                    <option value ="NOP" > New Orleans Pelicans</option>
+                    <option value ="NYK" > New York Knicks</option> 
+                    <option value ="OKC" > Oklahoma City Thunder</option> 
+                    <option value ="ORL" > Orlando Magic</option>
+                    <option value ="PHI" > Philadelphia 76ers</option>
+                    <option value ="PHX" > Phoenix Suns</option>
+                    <option value ="POR" > Portland Trail Blazers</option> 
+                    <option value ="SAC" > Sacramento Kings</option>
+                    <option value ="SAS" > San Antonio Spurs</option> 
+                    <option value ="TOR" > Toronto Raptors</option>
+                    <option value ="UTA" > Utah Jazz</option>
+                    <option value ="WAS" > Washington Wizards</option>
+                </select>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="pt-5 "></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto" style="width: 200px;">
+          <div class="col" id="forPic"> </div>
+        </div>
+        <div class="mx-auto" style="width: 250px;">
+          <div class="col-sm" id="resultBox">
+            Simulate game for results...
+          </div>
+        </div>
+        <div class="mx-auto" style="width: 200px;">
+          <div class="col" id="forPicB"> </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-5 "></div>
+
+    <div class="container" id="model-descrp">
+      Choose team A and team B, then pick a model for predicting the winner!
+    </div>
+
+
+    
+      <script src="main.js"></script>
+</body>

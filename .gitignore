@@ -1,0 +1,13 @@
+node_modules
+*.ipynb
+*.so
+*.o
+*.cxx
+*.vscode/
+__pycache__/
+predict.py
+h.py
+*.ipynb_checkpoints/
+# *.txt
+*.csv
+naiveBayes_1
